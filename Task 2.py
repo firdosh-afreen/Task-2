@@ -1,9 +1,9 @@
 import request
 import pandas as pd
 from urllib.request import urlretrieve
-from pprint import PrettyPrinter
-pp = PrettyPrinter()
-pp = PrettyPrinter()
+from quarter import quaternally
+quarter = quaternally()
+quarter = quaternally()
 api_Key = 'k50gwPRt2UfRDRIShbs0nmHpoa0vsNkv0yG53W45'
 def fetchAPOD():
     
@@ -21,7 +21,7 @@ def fetchAPOD():
     data.to_excel("output1.xlsx")
 
 
-def fetchAst():
+def fetchNeo():
     
     URL_NEO = "https://api.nasa.gov/neo/rest/v1/neo/browse/"
     date = '2021-06-15'
@@ -37,5 +37,5 @@ def fetchAst():
     print(data)
     data.to_excel("output2.xlsx")
 
-fetchAst()
+fetchNeo()
 fetchAPOD()
